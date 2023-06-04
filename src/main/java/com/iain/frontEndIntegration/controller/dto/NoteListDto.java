@@ -1,5 +1,6 @@
 package com.iain.frontEndIntegration.controller.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -7,8 +8,10 @@ import java.io.Serializable;
 @Data
 public class NoteListDto implements Serializable {
 
+    @JsonProperty("id")
     private String id;
 
-    private String noteMessgae;
+    @JsonProperty("noteMessage")
+    private String noteMessage;
 
 }
